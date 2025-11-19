@@ -55,6 +55,14 @@ export const Hero = () => {
             >
               Contáctanos
             </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => scrollToSection("contacto")}
+              className="text-lg bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+            >
+              Regularización de Pagos
+            </Button>
           </div>
         </div>
       </div>

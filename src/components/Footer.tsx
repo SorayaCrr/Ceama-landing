@@ -1,4 +1,4 @@
-import { BookOpen, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { BookOpen } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -11,40 +11,10 @@ export const Footer = () => {
               <BookOpen className="h-8 w-8" />
               <span className="text-2xl font-bold">CEAMA</span>
             </div>
-            <p className="text-background/80 mb-4">
+            <p className="text-background/80">
               Centro de Excelencia Académica en Matemática y Comunicación.
               Comprometidos con tu éxito académico y profesional.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="hover:text-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="hover:text-primary transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="hover:text-primary transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="hover:text-primary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
