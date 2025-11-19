@@ -3,25 +3,35 @@ import { CheckCircle2 } from "lucide-react";
 import communicationIcon from "@/assets/communication-icon.jpg";
 import mathIcon from "@/assets/math-icon.jpg";
 import physicsIcon from "@/assets/physics-icon.jpg";
+import coursesBg from "@/assets/courses-bg.jpg";
 
 export const Courses = () => {
   return (
-    <section id="cursos" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="cursos" className="py-20 relative overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={coursesBg}
+          alt="Cursos background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-warm opacity-80"></div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Nuestros Cursos
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Programas diseñados para potenciar tus habilidades académicas y
-            profesionales
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+            Programas diseñados especialmente para que aprendas de forma
+            divertida y efectiva
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Communication Course */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="h-48 overflow-hidden bg-gradient-to-br from-primary to-primary/70">
+          <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white/95 backdrop-blur-sm">
+            <div className="h-48 overflow-hidden bg-gradient-to-br from-education-orange to-education-yellow">
               <img
                 src={communicationIcon}
                 alt="Curso de Comunicación"
@@ -58,8 +68,8 @@ export const Courses = () => {
           </Card>
 
           {/* Mathematics Course */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="h-48 overflow-hidden bg-gradient-to-br from-education-secondary to-education-secondary/70">
+          <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white/95 backdrop-blur-sm">
+            <div className="h-48 overflow-hidden bg-gradient-to-br from-education-primary to-education-teal">
               <img
                 src={mathIcon}
                 alt="Curso de Matemática"
@@ -96,8 +106,8 @@ export const Courses = () => {
           </Card>
 
           {/* Physics Course */}
-          <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="h-48 overflow-hidden bg-gradient-to-br from-education-accent to-education-accent/70">
+          <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white/95 backdrop-blur-sm">
+            <div className="h-48 overflow-hidden bg-gradient-to-br from-education-purple to-education-coral">
               <img
                 src={physicsIcon}
                 alt="Curso de Física"

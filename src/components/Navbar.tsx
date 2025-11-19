@@ -46,6 +46,9 @@ export const Navbar = () => {
             >
               Contacto
             </button>
+            <Button variant="outline" onClick={() => scrollToSection("contacto")}>
+              Regularización de Pagos
+            </Button>
             <Button>Inscríbete Ahora</Button>
           </div>
 
@@ -85,6 +88,9 @@ export const Navbar = () => {
             >
               Contacto
             </button>
+            <Button variant="outline" className="w-full mb-2" onClick={() => scrollToSection("contacto")}>
+              Regularización de Pagos
+            </Button>
             <Button className="w-full">Inscríbete Ahora</Button>
           </div>
         )}

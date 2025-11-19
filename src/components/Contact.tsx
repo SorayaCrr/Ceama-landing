@@ -1,73 +1,89 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import contactBg from "@/assets/contact-bg.jpg";
 
 export const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
       title: "Teléfono",
-      content: "+51 999 999 999",
-      link: "tel:+51999999999",
+      info: "+51 987 654 321",
+      color: "from-education-orange to-education-yellow",
     },
     {
       icon: Mail,
-      title: "Email",
-      content: "info@ceama.edu.pe",
-      link: "mailto:info@ceama.edu.pe",
+      title: "Correo Electrónico",
+      info: "info@ceama.edu.pe",
+      color: "from-education-primary to-education-teal",
     },
     {
       icon: MapPin,
       title: "Dirección",
-      content: "Av. Universitaria 123, Lima, Perú",
-      link: "#",
+      info: "Av. Educación 123, Lima, Perú",
+      color: "from-education-purple to-education-coral",
     },
     {
       icon: Clock,
-      title: "Horario",
-      content: "Lun - Sáb: 8:00 AM - 8:00 PM",
-      link: "#",
+      title: "Horario de Atención",
+      info: "Lunes a Sábado: 8:00 AM - 8:00 PM",
+      color: "from-education-teal to-education-secondary",
     },
   ];
 
   return (
-    <section id="contacto" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="contacto" className="py-20 relative overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={contactBg}
+          alt="Contacto background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-warm opacity-85"></div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Contáctanos
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            ¿Tienes preguntas? Estamos aquí para ayudarte.
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+            Estamos aquí para responder todas tus preguntas y ayudarte a
+            comenzar tu camino hacia el éxito académico
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {contactInfo.map((info, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center text-center space-y-3">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <info.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      {info.title}
-                    </h3>
-                    {info.link && info.link !== "#" ? (
-                      <a
-                        href={info.link}
-                        className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                      >
-                        {info.content}
-                      </a>
-                    ) : (
-                      <p className="text-muted-foreground text-sm">{info.content}</p>
-                    )}
-                  </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {contactInfo.map((contact, index) => (
+            <Card
+              key={index}
+              className="hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white/95 backdrop-blur-sm"
+            >
+              <CardContent className="p-6 flex items-start space-x-4">
+                <div
+                  className={`flex-shrink-0 inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br ${contact.color}`}
+                >
+                  <contact.icon className="h-7 w-7 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    {contact.title}
+                  </h3>
+                  <p className="text-muted-foreground">{contact.info}</p>
                 </div>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <div className="inline-block bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl">
+            <h3 className="text-xl font-bold text-foreground mb-2">
+              ¿Listo para comenzar?
+            </h3>
+            <p className="text-muted-foreground">
+              Contáctanos hoy mismo y únete a nuestra comunidad educativa
+            </p>
+          </div>
         </div>
       </div>
     </section>
