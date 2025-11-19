@@ -1,8 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import communicationIcon from "@/assets/communication-icon.jpg";
 import mathIcon from "@/assets/math-icon.jpg";
+import physicsIcon from "@/assets/physics-icon.jpg";
 
 export const Courses = () => {
   return (
@@ -18,7 +18,7 @@ export const Courses = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Communication Course */}
           <Card className="overflow-hidden hover:shadow-xl transition-shadow">
             <div className="h-48 overflow-hidden bg-gradient-to-br from-primary to-primary/70">
@@ -30,24 +30,23 @@ export const Courses = () => {
             </div>
             <CardHeader>
               <CardTitle className="text-2xl">
-                Comunicación Efectiva
+                Comunicación
               </CardTitle>
               <CardDescription className="text-base">
-                Desarrolla habilidades de expresión oral y escrita
+                Aprende a leer, escribir y expresarte mejor
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Aprende a comunicarte con claridad, persuasión y confianza en
-                cualquier contexto académico o profesional.
+                Mejora tu lectura, escritura y forma de hablar de manera divertida y práctica.
               </p>
               <ul className="space-y-2">
                 {[
-                  "Redacción académica y profesional",
-                  "Oratoria y expresión oral",
-                  "Comprensión lectora avanzada",
-                  "Técnicas de argumentación",
-                  "Análisis de textos literarios",
+                  "Lectura comprensiva y entretenida",
+                  "Redacción de textos sencillos",
+                  "Expresión oral con confianza",
+                  "Ortografía y gramática básica",
+                  "Cuentos y narraciones",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-education-primary shrink-0 mt-0.5" />
@@ -55,7 +54,6 @@ export const Courses = () => {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full mt-4">Más Información</Button>
             </CardContent>
           </Card>
 
@@ -70,24 +68,23 @@ export const Courses = () => {
             </div>
             <CardHeader>
               <CardTitle className="text-2xl">
-                Razonamiento Matemático
+                Matemática
               </CardTitle>
               <CardDescription className="text-base">
-                Domina los conceptos y el pensamiento lógico-matemático
+                Aprende matemáticas de forma divertida
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Fortalece tu capacidad de análisis y resolución de problemas con
-                métodos innovadores y efectivos.
+                Resuelve problemas matemáticos con técnicas sencillas y juegos entretenidos.
               </p>
               <ul className="space-y-2">
                 {[
-                  "Álgebra y geometría aplicada",
-                  "Razonamiento lógico",
-                  "Resolución de problemas",
-                  "Estadística y probabilidades",
-                  "Matemática para exámenes de admisión",
+                  "Operaciones básicas y mental",
+                  "Problemas de razonamiento lógico",
+                  "Geometría con figuras y formas",
+                  "Juegos matemáticos",
+                  "Fracciones y números decimales",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-education-secondary shrink-0 mt-0.5" />
@@ -95,7 +92,44 @@ export const Courses = () => {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full mt-4">Más Información</Button>
+            </CardContent>
+          </Card>
+
+          {/* Physics Course */}
+          <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+            <div className="h-48 overflow-hidden bg-gradient-to-br from-education-accent to-education-accent/70">
+              <img
+                src={physicsIcon}
+                alt="Curso de Física"
+                className="w-full h-full object-cover opacity-90"
+              />
+            </div>
+            <CardHeader>
+              <CardTitle className="text-2xl">
+                Física
+              </CardTitle>
+              <CardDescription className="text-base">
+                Descubre cómo funciona el mundo que te rodea
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                Explora la ciencia de manera práctica con experimentos simples y conceptos básicos.
+              </p>
+              <ul className="space-y-2">
+                {[
+                  "Fuerzas y movimiento",
+                  "Energía y sus formas",
+                  "Luz y sonido",
+                  "Experimentos sencillos",
+                  "Máquinas simples",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-education-accent shrink-0 mt-0.5" />
+                    <span className="text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </CardContent>
           </Card>
         </div>
