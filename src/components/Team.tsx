@@ -79,12 +79,12 @@ export const Team = () => {
                       <BookOpen className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h5 className="font-semibold text-foreground mb-1">
-                        Más de 10 años de experiencia
-                      </h5>
-                      <p className="text-sm text-muted-foreground">
-                        Especializado en matemática y comunicación para nivel primaria y secundaria
-                      </p>
+                <h5 className="font-semibold text-foreground mb-1">
+                  Más de 25 años de experiencia
+                </h5>
+                <p className="text-sm text-muted-foreground">
+                  Especializado en matemática para nivel primaria y secundaria - Colegio San José Obrero
+                </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -121,6 +121,65 @@ export const Team = () => {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
+
+          {/* Additional Teachers Section */}
+          <div className="mt-16">
+            <h3 className="text-3xl font-bold text-center text-foreground mb-8">
+              Nuestro Equipo Docente
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Teacher 1 */}
+              <Card className="hover:shadow-xl transition-all">
+                <CardContent className="p-6 text-center">
+                  <div className="mb-4">
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      Liliana Alvarez Chavez
+                    </h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Docente especialista 1ro. y 2do. grado primaria
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Colegio Rafael Narvaez Cadenillas
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Teacher 2 */}
+              <Card className="hover:shadow-xl transition-all">
+                <CardContent className="p-6 text-center">
+                  <div className="mb-4">
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      Diana Castillo Miñano
+                    </h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Docente especialista en el área de Comunicación
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Colegio Rafael Narvaez Cadenillas
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Teacher 3 */}
+              <Card className="hover:shadow-xl transition-all">
+                <CardContent className="p-6 text-center">
+                  <div className="mb-4">
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      Giovanna Tejada Suarez
+                    </h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Docente especialista en primaria
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Colegio Rafael Narvaez Cadenillas
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
