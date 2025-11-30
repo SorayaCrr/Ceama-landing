@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, BookOpen, Users } from "lucide-react";
-import teacherProfile from "@/assets/teacher-profile.jpg";
+import teacherProfile from "@/assets/teacher-profile-new.png";
 import kahootVerified from "@/assets/kahoot-verified.png";
 import teacherDiana from "@/assets/teacher-diana.png";
 import teacherLiliana from "@/assets/teacher-liliana.png";
@@ -141,7 +141,7 @@ export const Team = () => {
                       <img
                         src={teacherLiliana}
                         alt="Liliana Alvarez Chavez"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                     </div>
                     <h4 className="text-xl font-bold text-foreground mb-2">
@@ -165,7 +165,7 @@ export const Team = () => {
                       <img
                         src={teacherDiana}
                         alt="Diana Castillo Miñano"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                     </div>
                     <h4 className="text-xl font-bold text-foreground mb-2">
@@ -189,7 +189,7 @@ export const Team = () => {
                       <img
                         src={teacherGiovanna}
                         alt="Giovanna Tejada Suarez"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                     </div>
                     <h4 className="text-xl font-bold text-foreground mb-2">
