@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
+import classroomBg from "@/assets/classroom-bg.png";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -16,8 +16,8 @@ export const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImage}
-          alt="CEAMA Academia"
+          src={classroomBg}
+          alt="CEAMA Academia Classroom"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>

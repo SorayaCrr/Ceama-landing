@@ -2,6 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Award, BookOpen, Users } from "lucide-react";
 import teacherProfile from "@/assets/teacher-profile.jpg";
 import kahootVerified from "@/assets/kahoot-verified.png";
+import teacherDiana from "@/assets/teacher-diana.png";
+import teacherLiliana from "@/assets/teacher-liliana.png";
+import teacherGiovanna from "@/assets/teacher-giovanna.png";
 
 export const Team = () => {
   return (
@@ -133,7 +136,14 @@ export const Team = () => {
               {/* Teacher 1 */}
               <Card className="hover:shadow-xl transition-all">
                 <CardContent className="p-6 text-center">
-                  <div className="mb-4">
+                  <div className="flex flex-col items-center">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-education-teal shadow-lg">
+                      <img
+                        src={teacherLiliana}
+                        alt="Liliana Alvarez Chavez"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <h4 className="text-xl font-bold text-foreground mb-2">
                       Liliana Alvarez Chavez
                     </h4>
@@ -150,7 +160,14 @@ export const Team = () => {
               {/* Teacher 2 */}
               <Card className="hover:shadow-xl transition-all">
                 <CardContent className="p-6 text-center">
-                  <div className="mb-4">
+                  <div className="flex flex-col items-center">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-education-purple shadow-lg">
+                      <img
+                        src={teacherDiana}
+                        alt="Diana Castillo Miñano"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <h4 className="text-xl font-bold text-foreground mb-2">
                       Diana Castillo Miñano
                     </h4>
@@ -167,7 +184,14 @@ export const Team = () => {
               {/* Teacher 3 */}
               <Card className="hover:shadow-xl transition-all">
                 <CardContent className="p-6 text-center">
-                  <div className="mb-4">
+                  <div className="flex flex-col items-center">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-education-coral shadow-lg">
+                      <img
+                        src={teacherGiovanna}
+                        alt="Giovanna Tejada Suarez"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <h4 className="text-xl font-bold text-foreground mb-2">
                       Giovanna Tejada Suarez
                     </h4>
